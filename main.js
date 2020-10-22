@@ -1,5 +1,5 @@
 // let answer;
-
+players = ["Isobel", "Emma"];
 // // let tile1 = document
 // //   .querySelector("#tile-1")
 // //   .addEventListener("click", function () {
@@ -25,6 +25,7 @@
 
 // console.log(tile1);
 
-const testboard = new Board([{question: 'what your name', answer: 'Emma'}, {question: 'where do you live', answer: 'Kingsheath'}]);
-
-
+const testboard = new Board([
+  { question: "what your name", answer: "Emma" },
+  { question: "where do you live", answer: "Kingsheath" },
+]);

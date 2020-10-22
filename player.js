@@ -14,7 +14,7 @@ class Player {
     this.playerTurn = false;
   }
 
-  turnPrompt() {
+  getMove() {
     let turn = document.quesrySelector("h2");
     turn.innerText = `${this.name} Pick Your Tile!!`;
   }
