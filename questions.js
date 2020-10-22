@@ -12,11 +12,11 @@ class Question {
     this.number = number;
     this.question = question;
     this.answer = answer;
-    this.answerTile = true; // true when on the table
+    this.answerTile = true; // true when on the board - i.e. not answered
   }
 
-  remove() {
-    let tile = document.querySelector(`.tile${number}`);
-    tile.style = `background-color: " "`;
-  }
+  //   remove() {
+  //     let tile = document.querySelector(`.tile${number}`);
+  //     tile.style = `background-color: " "`;
+  //   }
 }

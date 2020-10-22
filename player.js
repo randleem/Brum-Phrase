@@ -11,11 +11,18 @@
 class Player {
   constructor(name) {
     this.name = name;
-    this.playerTurn = false;
+    //this.playerTurn = false;
   }
 
-  getMove() {
+  getMove(answer) {
     let turn = document.quesrySelector("h2");
     turn.innerText = `${this.name} Pick Your Tile!!`;
+    let tile = document.querySelector(".tile");
+    tile.addEventListener("click", (event) => {
+      if (event.id === answer) {
+        // need to check if the answer is correct
+        event.style = `background-color: " "`;
+      }
+    });
   }
 }

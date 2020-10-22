@@ -1,43 +1,46 @@
 // Object Class
-    // State
-        // Array of Questions - triggered from question objects
-        // Background picture
+// State
+// Array of Questions - triggered from question objects
+// Background picture
 
-    // Behaviour
-        // setUpBoard()
-        // checkAnswer() - T/F
-        // checkPictureAnswer - T/F
+// Behaviour
+// setUpBoard()
+// checkAnswer() - T/F
+// checkPictureAnswer - T/F
 
-    class Board {
-        constructor(arrayOfQuestions){
-            this.arrayOfQuestions = arrayOfQuestions.map((question, i)=> {new Question (i, question.question, question.answer)});
-            this.answerTiles = arrayOfQuestions.forEach((question)=> {
-                let container = document.querySelector('.container');
-                let tile = document.createElement('div');
-                tile.innerText = question.answer;
-                tile.classList.add('tile');
-                tile.style = `background-color: powderblue`;
-                container.appendChild(tile);
-            } )
-    }
+class Board {
+  constructor(arrayOfQuestions) {
+    this.arrayOfQuestions = arrayOfQuestions;
+    // this.arrayOfQuestions = arrayOfQuestions.map((question, i) => {
+    //   new Question(i, question.question, question.answer);
+    // });
+  }
+  drawTiles(handleAnswer) {
+    this.arrayOfQuestions.forEach((question) => {
+      let container = document.querySelector(".container");
+      let tile = document.createElement("div");
+      tile.innerText = question.answer;
+      tile.classList.add("tile");
+      tile.setAttribute("id", question.number);
+      tile.style = `background-color: powderblue`;
+      tile.addEventListener("click", () => {
+        handleAnswer(question.answer, question.number); // Emma added question number
+        console.log(question.number); // Emma - question number doesnt work atm as we are not running our Question class - either need to set question number on array we hand it or try Liz's solution - cant get to work
+      });
+      container.appendChild(tile);
+    });
+  }
 }
 
-
-        //checkPlayerAnswer(answer)
-        //if(turnAnswer === questionAnswer)
+//checkPlayerAnswer(answer)
+//if(turnAnswer === questionAnswer)
 
 // to check if the answers correct if(questionNumber===tilenumber){
-    //true and trigger question.remove
+//true and trigger question.remove
 //}
 
-
-    // class Picture {
-    //     constructor(backgroundPic){
-    //         this.backgroundPic = backgroundPic
-    //     }
-    // }
-
-
-
-
-        
+// class Picture {
+//     constructor(backgroundPic){
+//         this.backgroundPic = backgroundPic
+//     }
+// }

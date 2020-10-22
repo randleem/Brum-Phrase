@@ -25,7 +25,17 @@ players = ["Isobel", "Emma"];
 
 // console.log(tile1);
 
-const testboard = new Board([
-  { question: "what your name", answer: "Emma" },
-  { question: "where do you live", answer: "Kingsheath" },
-]);
+// const testboard = new Board([
+//   { question: "what your name", answer: "Emma" },
+//   { question: "where do you live", answer: "Kingsheath" },
+// ]);
+
+let x = new Game(
+  [
+    { question: "what's your name", answer: "Emma", number: 1 },
+    { question: "where do you live", answer: "Kings Heath", number: 2 },
+  ],
+  ["emma", "isobel"]
+);
+
+x.play();
