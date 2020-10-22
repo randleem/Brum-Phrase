@@ -1,0 +1,30 @@
+
+
+
+
+.tile {   
+ display: flex;
+
+   justify-content: center;
+   align-items: center;
+   font-size: 2em;
+   font-family: sans-serif;
+   font-weight: bold;
+   margin: 0;
+   z-index: 10;
+   }
+
+   .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    grid-gap: 0rem;
+   }
+
+   img
+{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
