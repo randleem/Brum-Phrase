@@ -59,8 +59,9 @@ inputGuess(){
   let button = document.querySelector("button");
   button.addEventListener("click", () => {
     console.log('working');
-        tile.style = `background-color: #ecce3e`;
-        let guess = document.querySelector("#input-text").value;
+  
+  //tile.style = `background-color: #ecce3e`;
+  let guess = document.querySelector("#input-text").value;
     if (guess.toLowerCase() === 'twirl'){
       document.querySelector("#player-display").innerText= `Congratulations ${this.players[this.currentPlayerIndex].name} you're the winner!!!!`;
     let DeleteAllTiles= document.querySelector(".container");
