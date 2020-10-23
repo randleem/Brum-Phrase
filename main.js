@@ -33,6 +33,7 @@ let player2 = prompt(`Please Enter Player 2's Name`);
 
 startImage = document.querySelector("#start-image");
 startImage.addEventListener("click", () =>{
+
   startImage.remove();
   let x = new Game(
     [
@@ -49,4 +50,16 @@ startImage.addEventListener("click", () =>{
     [player1, player2]
   );
   x.play();
+  randomise()
 })
+
+function randomise (){
+  var div = document.querySelector('.container');
+  for (var i = div.children.length; i >= 0; i--) {
+      div.appendChild(div.children[Math.random() * i | 0]);
+  }
+}
+
+
+
+

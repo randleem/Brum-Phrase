@@ -10,9 +10,11 @@ class Game {
     this.currentQuestionIndex = 0;
   }
   play() {
+    
     this.board.drawTiles((answer) => {
       this.handleAnswer(answer);
     });
+    
     document.querySelector("#player-display").innerText= `${this.players[this.currentPlayerIndex].name} your turn! Please choose a tile.`;
     
   }
