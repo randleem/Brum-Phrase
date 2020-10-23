@@ -17,13 +17,18 @@ class Board {
   }
   drawTiles(handleAnswer) {
     this.arrayOfQuestions.forEach((question) => {
-      document.querySelector("#question-display").innerText= `what is the brummy word for: ${this.arrayOfQuestions[0].question}?`;
+      document.querySelector("#question-display").innerText= `What Is The Brummy Word For: ${this.arrayOfQuestions[0].question}?`;
       let container = document.querySelector(".container");
       let tile = document.createElement("div");
       tile.innerText = question.answer;
       tile.classList.add("tile");
       tile.setAttribute("id", `tile-${question.number}`);
-      tile.style = `background-color: powderblue`;
+      if (question.number %2 ===0){
+        tile.style = `background-color: #ecce3e`;
+      }else if(question.number %2 ===1){
+        tile.style = `background-color: #02cdb9`;
+      }
+        
       tile.addEventListener("click", () => {
         handleAnswer(question.answer); // Emma added question number
 ; // Emma - question number doesnt work atm as we are not running our Question class - either need to set question number on array we hand it or try Liz's solution - cant get to work

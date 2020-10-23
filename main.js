@@ -32,11 +32,15 @@ players = ["Isobel", "Emma"];
 
 let x = new Game(
   [
-    { number:1, question: "Farewell Saying", answer: "Tarra a Bit"},
-    { number:2, question: "In a bad mood", answer: "Got a cob on"},
-    { number:3, question: "Eating loudly", answer: "Chobbling"},
-    { number:4, question: "I didnt do that", answer: "I didnt do that"},
+    { number:1, question: "Farewell Saying", answer: "Tarra A Bit"},
+    { number:2, question: "In A Bad Mood", answer: "Got A Cob On"},
+    { number:3, question: "Eating Loudly", answer: "Chobbling"},
+    { number:4, question: "I Didn't Do", answer: "I Ay Done"},
     { number:5, question: "Selling News", answer: "Evelyn Mal"},
+    { number:6, question: "Round About", answer: "Island"},
+    { number:7, question: "Forward Roll", answer: "Gambol"},
+    { number:8, question: "Vehicle", answer: "Buz"},
+    { number:9, question: "Walking Along Canals", answer: "The Cut"}
   ],
   ["Emma", "Isobel"]
 );
