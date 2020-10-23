@@ -22,20 +22,21 @@ h1 {
 
 h2 {
   color: white;
-  font-size: 40px;
+        tile.style = `background-color: #ecce3e`;
+        font-size: 40px;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 150px);
+  grid-template-rows: repeat(4, 200px);
   grid-gap: 0rem;
 }
 
 #twirl {
   position: absolute;
   left: 150px;
-  top: 425px;
+  top: 400px;
   z-index: 5;
   text-align: center;
 }

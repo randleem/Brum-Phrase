@@ -10,11 +10,9 @@ class Game {
     this.currentQuestionIndex = 0;
   }
   play() {
-    
     this.board.drawTiles((answer) => {
       this.handleAnswer(answer);
     });
-    
     document.querySelector("#player-display").innerText= `${this.players[this.currentPlayerIndex].name} your turn! Please choose a tile.`;
     
   }
@@ -61,7 +59,8 @@ inputGuess(){
   let button = document.querySelector("button");
   button.addEventListener("click", () => {
     console.log('working');
-    let guess = document.querySelector("#input-text").value;
+        tile.style = `background-color: #ecce3e`;
+        let guess = document.querySelector("#input-text").value;
     if (guess.toLowerCase() === 'twirl'){
       document.querySelector("#player-display").innerText= `Congratulations ${this.players[this.currentPlayerIndex].name} you're the winner!!!!`;
     let DeleteAllTiles= document.querySelector(".container");
