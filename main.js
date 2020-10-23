@@ -1,5 +1,4 @@
-// let answer;
-players = ["Isobel", "Emma"];
+// let answer
 // // let tile1 = document
 // //   .querySelector("#tile-1")
 // //   .addEventListener("click", function () {
@@ -29,20 +28,25 @@ players = ["Isobel", "Emma"];
 //   { question: "what your name", answer: "Emma" },
 //   { question: "where do you live", answer: "Kingsheath" },
 // ]);
+let player1 = prompt(`Please Enter Player 1's Name`);
+let player2 = prompt(`Please Enter Player 2's Name`);
 
-let x = new Game(
-  [
-    { number:1, question: "Farewell Saying", answer: "Tarra A Bit"},
-    { number:2, question: "In A Bad Mood", answer: "Got A Cob On"},
-    { number:3, question: "Eating Loudly", answer: "Chobbling"},
-    { number:4, question: "I Didn't Do", answer: "I Ay Done"},
-    { number:5, question: "Selling News", answer: "Evelyn Mal"},
-    { number:6, question: "Round About", answer: "Island"},
-    { number:7, question: "Forward Roll", answer: "Gambol"},
-    { number:8, question: "Vehicle", answer: "Buz"},
-    { number:9, question: "Walking Along Canals", answer: "The Cut"}
-  ],
-  ["Emma", "Isobel"]
-);
-
-x.play();
+startImage = document.querySelector("#start-image");
+startImage.addEventListener("click", () =>{
+  startImage.remove();
+  let x = new Game(
+    [
+      { number:1, question: "Farewell Saying", answer: "Tarra A Bit"},
+      { number:2, question: "In A Bad Mood", answer: "Got A Cob On"},
+      { number:3, question: "Eating Loudly", answer: "Chobbling"},
+      { number:4, question: "I Didn't Do", answer: "I Ay Done"},
+      { number:5, question: "Selling News", answer: "Evelyn Mal"},
+      { number:6, question: "Round About", answer: "Island"},
+      { number:7, question: "Forward Roll", answer: "Gambol"},
+      { number:8, question: "Vehicle", answer: "Buz"},
+      { number:9, question: "Walking Along Canals", answer: "The Cut"}
+    ],
+    [player1, player2]
+  );
+  x.play();
+})

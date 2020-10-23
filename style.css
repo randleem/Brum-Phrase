@@ -15,10 +15,14 @@ body {
   margin: 0;
   z-index: 10;
 }
-
-h2 {
+h1 {
   color: #f7017c;
   font-size: 50px;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
 }
 
 .container {
@@ -28,7 +32,15 @@ h2 {
   grid-gap: 0rem;
 }
 
-img {
+#twirl {
   position: absolute;
+  left: 150px;
+  top: 425px;
   z-index: 5;
+  text-align: center;
+}
+
+#player-display {
+  color: #f7017c;
+  font-size: 30px;
 }

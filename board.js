@@ -28,7 +28,12 @@ class Board {
       }else if(question.number %2 ===1){
         tile.style = `background-color: #02cdb9`;
       }
-        
+      let twirl = document.createElement("img");
+      let twirlDiv = document.querySelector("#twirl-div");
+      twirl.src="https://www.thesun.co.uk/wp-content/uploads/2020/08/NINTCHDBPICT000525971979-2-e1571327936731.jpg?strip=all&w=960";
+      twirl.widthsrc="650";
+      twirl.setAttribute("id", `twirl`);
+      twirlDiv.appendChild(twirl);
       tile.addEventListener("click", () => {
         handleAnswer(question.answer); // Emma added question number
 ; // Emma - question number doesnt work atm as we are not running our Question class - either need to set question number on array we hand it or try Liz's solution - cant get to work

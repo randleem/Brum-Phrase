@@ -15,36 +15,8 @@ class Game {
     });
     document.querySelector("#player-display").innerText= `${this.players[this.currentPlayerIndex].name} your turn! Please choose a tile.`;
     
-    let button = document.querySelector("button");
-
-    button.addEventListener("click", () => {
-      let guess = document.querySelector("#input-text").value;
-      if (guess.toLowerCase() === 'twirl'){
-        document.querySelector("#player-display").innerText= `Congratulations ${name} you're the winner!!!!`;
-      let DeleteAllTiles= document.querySelector(".container");
-      DeleteAllTiles.remove();
-      } else if (guess.toLowerCase() !== 'twirl'){
-      }
-    })
   }
 
-  // imageAnswer(){
-  //   let guess = document.querySelector("#input-text").innerText;
-  //   let button = document.querySelector("button");
-
-  //   button.addEventListener("click", () => {
-  //     if (guess.toLowerCase === 'twirl'){
-  //       getWinner ();
-  //     }
-  //   })
-
-
-
-  // getWinner(name){
-  //   document.querySelector("#player-display").innerText= `Congratulations ${name} you're the winner!!!!`;
-  //   let DeleteAllTiles= document.querySelector("#container");
-  //   DeleteAllTiles.innerHTML = "";
-  // }
 
   handleAnswer(answer) {
     if (
@@ -53,8 +25,9 @@ class Game {
       let x = document.querySelector(`#tile-${this.board.arrayOfQuestions[this.currentQuestionIndex].number}`); //Emma tryng to make tile disapear - currently not working
       x.innerText = ""
       x.style = `background-color: " "`; 
+      this.displayInputBox();
+      this.inputGuess();
       this.currentQuestionIndex++;
-      document.querySelector("#question-display").innerText= `What is the brummy word for: ${this.board.arrayOfQuestions[this.currentQuestionIndex].question}?`;
     } else if (
       answer !== this.board.arrayOfQuestions[this.currentQuestionIndex].answer
     ) {
@@ -66,9 +39,53 @@ class Game {
       document.querySelector("#player-display").innerText= `${this.players[this.currentPlayerIndex].name} your turn! Please choose a tile.`;
       return false;
     }
+    
   }
+
+
+displayInputBox(){
+  let inputDiv = document.querySelector("#input-div");
+  let button = document.createElement("button");
+  button.innerText = "Submit";
+  let input = document.createElement("input");
+  input.setAttribute("id", `input-text`);
+  input.placeholder= 'Guess the image!';
+  inputDiv.appendChild(input);
+  inputDiv.appendChild(button);
+  // this.inputGuess();
 }
 
+inputGuess(){
+  let button = document.querySelector("button");
+  button.addEventListener("click", () => {
+    console.log('working');
+    let guess = document.querySelector("#input-text").value;
+    if (guess.toLowerCase() === 'twirl'){
+      document.querySelector("#player-display").innerText= `Congratulations ${this.players[this.currentPlayerIndex].name} you're the winner!!!!`;
+    let DeleteAllTiles= document.querySelector(".container");
+    DeleteAllTiles.remove();
+    let deleteInput= document.querySelector("#input-text");
+    deleteInput.remove();
+    let deleteButton = document.querySelector("button");
+    deleteButton.remove();
+
+    } else if (guess.toLowerCase() !== 'twirl'){
+      document.querySelector("#question-display").innerText= `What is the brummy word for: ${this.board.arrayOfQuestions[this.currentQuestionIndex].question}?`;
+      if (this.currentPlayerIndex < this.players.length-1) {
+        this.currentPlayerIndex++;
+      } else if (this.currentPlayerIndex === this.players.length-1) {
+        this.currentPlayerIndex = 0;
+      }
+      document.querySelector("#player-display").innerText= `${this.players[this.currentPlayerIndex].name} your turn! Please choose a tile.`;
+      let deleteInput= document.querySelector("#input-text");
+    deleteInput.remove();
+    let deleteButton = document.querySelector("button");
+    deleteButton.remove();
+    }
+  })
+
+  };
+}
 
 
 // Game object Class
