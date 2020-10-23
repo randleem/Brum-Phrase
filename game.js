@@ -25,9 +25,11 @@ class Game {
     this.currentQuestionIndex = 0;
   }
   play() {
-    this.board.drawTiles((answer) => {
-      this.handleAnswer(answer);
+    this.board.drawTiles((answer, question) => {
+      this.displayQuestion(question);
+      this.handleAnswer(answer);// Need to siaplay question
     });
+
     // for each round
     // get question from board - this hopefully will be random - or move between questions
     // need it to go through list of questions that are still on the board - i.e. not yet guessed
@@ -41,18 +43,26 @@ class Game {
     }
   }
 
-  handleAnswer(answer, id) {
+  displayQuestion(question){
+    y = document.querySelector("#question-display");
+    y.innerText = question;
+  }
+
+  handleAnswer(answer) {
     if (
       answer === this.board.arrayOfQuestions[this.currentQuestionIndex].answer
     ) {
-      this.currentQuestionIndex++;
-      let x = document.querySelector(`#${id}`); //Emma tryng to make tile disapear - currently not working
+      let x = document.querySelector(`#tile-${this.board.arrayOfQuestions[this.currentQuestionIndex].number}`); //Emma tryng to make tile disapear - currently not working
+      x.innerText = ""
       x.style = `background-color: " "`; //Emma tryng to make tile disapear - currently not working
       console.log(`Correct`);
+      this.currentQuestionIndex++;
+      return true;
     } else if (
       answer !== this.board.arrayOfQuestions[this.currentQuestionIndex].answer
     ) {
       console.log(`Incorrect`);
+      return false;
     }
   }
 }
