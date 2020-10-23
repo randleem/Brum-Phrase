@@ -17,11 +17,10 @@ class Board {
   }
   drawTiles(handleAnswer) {
     this.arrayOfQuestions.forEach((question) => {
-      console.log(question);
+      document.querySelector("#question-display").innerText= `what is the brummy word for: ${this.arrayOfQuestions[0].question}?`;
       let container = document.querySelector(".container");
       let tile = document.createElement("div");
       tile.innerText = question.answer;
-      console.log(question.number);
       tile.classList.add("tile");
       tile.setAttribute("id", `tile-${question.number}`);
       tile.style = `background-color: powderblue`;
@@ -31,6 +30,9 @@ class Board {
       });
       container.appendChild(tile);
     });
+
+
+
   }
 }
 
