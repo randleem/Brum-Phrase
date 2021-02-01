@@ -9,6 +9,8 @@ Isabel Holland @hey-irh (my paired-programming partner for the week) and I creat
 
 This was a really difficult but fun hackethon
 
+Isabel and I are planning on refactoring and sorting out the stylings with our new found CSS Skills 😀
+
 👾 **Brum Phrase** 🕹️
 
 ![Brum Phrase pic](./BrumPhrase.jpeg)
