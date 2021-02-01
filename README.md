@@ -1,7 +1,7 @@
 # Brum-Phrase
 
-*23rd October 2020*
-*Week 5 at the [School of Code](https://www.schoolofcode.co.uk)*
+_23rd October 2020_
+_Week 5 at the [School of Code](https://www.schoolofcode.co.uk)_
 
 This was our week 5 Friday hackathon at the [School of Code](https://www.schoolofcode.co.uk) which was Object Oriented Programming Week
 
@@ -9,9 +9,9 @@ Isabel Holland @hey-irh (my paired-programming partner for the week) and I creat
 
 This was a really difficult but fun hackethon
 
- 👾 **Brum Phrase** 🕹️
- 
- ![Brum Phrase pic](./BrumPhrase.jpeg)
+👾 **Brum Phrase** 🕹️
+
+![Brum Phrase pic](Brum-Phrase/BrumPhrase.jpeg)
 
 ## Built with
 
