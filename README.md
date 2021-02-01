@@ -10,6 +10,8 @@ Isabel Holland @hey-irh (my paired-programming partner for the week) and I creat
 This was a really difficult but fun hackethon
 
  👾 **Brum Phrase** 🕹️
+ 
+ ![Brum Phrase pic](./BrumPhrase.jpeg)
 
 ## Built with
 
