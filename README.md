@@ -27,6 +27,15 @@ https://github.com/randleem/Brum-Phrase.git
 
 2. Navigate to the repo
 
-3. Copy the relative path to the HTML
+3. Copy the path of the HTML file and copy into your browser
 
 4. Enjoy
+
+## Usage
+
+1. Launch the App
+2. Enter player 1 & 2 names
+3. Take it in turns to guess the correct Brum Phrase based on the questions
+4. If your answer is correct you will be given the option to guess the Image behind the answer tiles
+5. If your guess is wrong, it is now the next player's turn to select the Brum Phrase
+6. The winner if the player who correctly guesses the background image
