@@ -27,6 +27,6 @@ https://github.com/randleem/Brum-Phrase.git
 
 2. Navigate to the repo
 
-3. Copy the relative path to the HTML
+3. Copy the path of the HTML file and copy into your browser
 
 4. Enjoy
