@@ -11,7 +11,7 @@ This was a really difficult but fun hackethon
 
 👾 **Brum Phrase** 🕹️
 
-![Brum Phrase pic](Brum-Phrase/BrumPhrase.jpeg)
+![Brum Phrase pic](./BrumPhrase.jpeg)
 
 ## Built with
 
